@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 756938278210868745}
   - component: {fileID: 8697062609413944279}
   - component: {fileID: 4464747116797411705}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Broken Piece5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1259068561
+  m_SortingLayer: 2
+  m_SortingOrder: -1
   m_Sprite: {fileID: -2796105001415810770, guid: b1e514ee9c00f0c458e99f588dfa4cb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
