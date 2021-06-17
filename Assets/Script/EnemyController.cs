@@ -46,44 +46,44 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(shouldWander)
+        if (shouldWander)
         {
-            pauseCounter = Random.Range(pauseLength * .75f , pauseLength * 1.25f);
+            pauseCounter = Random.Range(pauseLength * .75f, pauseLength * 1.25f);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(theBody.isVisible && PlayerController.instance.gameObject.activeInHierarchy)
+        if (theBody.isVisible && PlayerController.instance.gameObject.activeInHierarchy)
         {
             moveDirection = Vector3.zero;
-            
+
             if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) < rangeToChasePlayer && shouldChasePlayer)
             {
                 moveDirection = PlayerController.instance.transform.position - transform.position;
             }
             else
             {
-                if(shouldWander)
+                if (shouldWander)
                 {
-                    if(wanderCounter > 0)
+                    if (wanderCounter > 0)
                     {
                         wanderCounter -= Time.deltaTime;
 
                         moveDirection = wanderDirection;
 
-                        if(wanderCounter <= 0)
+                        if (wanderCounter <= 0)
                         {
-                            pauseCounter = Random.Range(pauseLength * .75f , pauseLength * 1.25f);
+                            pauseCounter = Random.Range(pauseLength * .75f, pauseLength * 1.25f);
                         }
                     }
 
-                    if(pauseCounter > 0)
+                    if (pauseCounter > 0)
                     {
                         pauseCounter -= Time.deltaTime;
 
-                        if(pauseCounter <= 0)
+                        if (pauseCounter <= 0)
                         {
                             wanderCounter = Random.Range(wanderLength * .75f, wanderLength * 1.25f);
 
@@ -92,14 +92,14 @@ public class EnemyController : MonoBehaviour
                     }
                 }
 
-                if(shouldPatrol)
+                if (shouldPatrol)
                 {
                     moveDirection = patrolPoints[currentPatrolPiont].position - transform.position;
 
-                    if(Vector3.Distance(transform.position, patrolPoints[currentPatrolPiont].position) < .2f)
+                    if (Vector3.Distance(transform.position, patrolPoints[currentPatrolPiont].position) < .2f)
                     {
                         currentPatrolPiont++;
-                        if(currentPatrolPiont >= patrolPoints.Length)
+                        if (currentPatrolPiont >= patrolPoints.Length)
                         {
                             currentPatrolPiont = 0;
                         }
@@ -107,7 +107,7 @@ public class EnemyController : MonoBehaviour
                 }
             }
 
-            if(shouldRunAway && Vector3.Distance(transform.position, PlayerController.instance.transform.position) < runawayRange)
+            if (shouldRunAway && Vector3.Distance(transform.position, PlayerController.instance.transform.position) < runawayRange)
             {
                 moveDirection = transform.position - PlayerController.instance.transform.position;
             }
@@ -153,7 +153,7 @@ public class EnemyController : MonoBehaviour
 
         Instantiate(hitEffect, transform.position, transform.rotation);
 
-        if(health <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
 
