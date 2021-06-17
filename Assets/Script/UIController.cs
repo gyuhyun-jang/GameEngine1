@@ -19,7 +19,7 @@ public class UIController : MonoBehaviour
 
     public string newGameScene, mainMenuScene;
 
-    public GameObject pauseMenu;
+    public GameObject pauseMenu, mapDisplay, bigMapText;
 
     private void Awake()
     {
