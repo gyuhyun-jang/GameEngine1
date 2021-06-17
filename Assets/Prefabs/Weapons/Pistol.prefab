@@ -132,3 +132,5 @@ MonoBehaviour:
   timeBetweenShots: 0.2
   weaponName: Pistol
   gunUI: {fileID: 262978286505467586, guid: f72804754a2106a4884d758772ef2a02, type: 3}
+  itemCost: 10
+  gunShopSprite: {fileID: 6407226241554960098, guid: 48d85d1ef51430e42b6aef57f02c863d, type: 3}

@@ -102,6 +102,8 @@ MonoBehaviour:
   timeBetweenShots: 1
   weaponName: Revolver
   gunUI: {fileID: -3940896912681915257, guid: f72804754a2106a4884d758772ef2a02, type: 3}
+  itemCost: 10
+  gunShopSprite: {fileID: -51580551502718289, guid: 48d85d1ef51430e42b6aef57f02c863d, type: 3}
 --- !u!1 &6233322532764602804
 GameObject:
   m_ObjectHideFlags: 0
