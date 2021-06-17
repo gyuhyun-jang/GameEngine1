@@ -159,7 +159,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theRB: {fileID: 4880275515477098878}
   moveSpeed: 3
+  shouldChasePlayer: 0
   rangeToChasePlayer: 7
+  shouldRunAway: 0
+  runawayRange: 0
+  shouldWander: 0
+  wanderLength: 0
+  pauseLength: 0
+  shouldPatrol: 0
+  patrolPoints: []
   anim: {fileID: 4880275515477098864}
   health: 150
   deathSplatters:
@@ -174,6 +182,10 @@ MonoBehaviour:
   fireRate: 1
   shootRange: 10
   theBody: {fileID: 4880275514211418335}
+  shouldDropItem: 1
+  itemsToDrop:
+  - {fileID: 6636444961296979337, guid: 29b405f187ddd584d9cbe406e014d4b7, type: 3}
+  itemDropPercent: 25
 --- !u!50 &4880275515477098878
 Rigidbody2D:
   serializedVersion: 4

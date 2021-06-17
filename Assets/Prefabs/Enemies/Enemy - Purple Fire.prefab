@@ -132,6 +132,10 @@ MonoBehaviour:
   fireRate: 1
   shootRange: 10
   theBody: {fileID: 7662511467033006999}
+  shouldDropItem: 1
+  itemsToDrop:
+  - {fileID: 6636444961296979337, guid: 29b405f187ddd584d9cbe406e014d4b7, type: 3}
+  itemDropPercent: 25
 --- !u!50 &7662511465614234166
 Rigidbody2D:
   serializedVersion: 4

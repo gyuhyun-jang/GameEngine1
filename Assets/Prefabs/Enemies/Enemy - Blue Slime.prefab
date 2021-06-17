@@ -196,6 +196,8 @@ MonoBehaviour:
   shouldWander: 1
   wanderLength: 4
   pauseLength: 1.5
+  shouldPatrol: 0
+  patrolPoints: []
   anim: {fileID: 8839600147330481161}
   health: 150
   deathSplatters:
@@ -210,6 +212,10 @@ MonoBehaviour:
   fireRate: 1
   shootRange: 10
   theBody: {fileID: 8839600146062310822}
+  shouldDropItem: 1
+  itemsToDrop:
+  - {fileID: 6636444961296979337, guid: 29b405f187ddd584d9cbe406e014d4b7, type: 3}
+  itemDropPercent: 25
 --- !u!50 &8839600147330481159
 Rigidbody2D:
   serializedVersion: 4
