@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1845412072190504437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1845412072190504439}
+  - component: {fileID: 1845412072190504436}
+  m_Layer: 0
+  m_Name: Level Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1845412072190504439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845412072190504437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1845412073436667866}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1845412072190504436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845412072190504437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25ba724a7cc7d94f95d953980e91d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layoutRoom: {fileID: 4307756191835425507, guid: 719f19b86a7489c4790c5a5a100db121, type: 3}
+  startColor: {r: 0, g: 0.989553, b: 1, a: 1}
+  endColor: {r: 1, g: 0, b: 0, a: 1}
+  distanceToEnd: 10
+  generatorPoint: {fileID: 1845412073436667866}
+  selectedDirection: 3
+  xOffset: 18
+  yOffset: 10
+  whatIsRoom:
+    serializedVersion: 2
+    m_Bits: 8192
+  rooms:
+    singleUp: {fileID: 4146777088679250989, guid: ed1076a2f2dabb144adeb15de9941d1e, type: 3}
+    singleDown: {fileID: 3487048910444861725, guid: 99f34a66cd3c23c418426bd1287c49fa, type: 3}
+    singleRight: {fileID: 7338418061926346127, guid: 20468272fd2dbae4fa9423db008a24ba, type: 3}
+    singleLeft: {fileID: 4343557741374424965, guid: 33b8a86203a3f61458c73cf7b0e57efe, type: 3}
+    doubleUpDown: {fileID: 5823784736804245771, guid: b35b03480f997284c9fee9565a315730, type: 3}
+    doubleLeftRight: {fileID: 7566742646525471475, guid: a809129ea53be6043800b3ce79cd628c, type: 3}
+    doubleUpRight: {fileID: 3140770878597383140, guid: 430c4cf24128def4b827393d186ed231, type: 3}
+    doubleRightDown: {fileID: 4028737388077145728, guid: 0faaba6781b191c449d2b10bb9334eaa, type: 3}
+    doubleDownLeft: {fileID: 3326964571966780064, guid: c40be8646d514fb4396c07a5447eac15, type: 3}
+    doubleLeftUp: {fileID: 3362022679184997624, guid: 0a2481c4ae51e164590f2dafb26ee10e, type: 3}
+    tripleUpRightDown: {fileID: 1786875560714424085, guid: f22dd84e3ded7124ba9a7411ce9871e9, type: 3}
+    tripleRightDownLeft: {fileID: 5719430291447053756, guid: 6908b7782a89bce4b851657b5d3db41c, type: 3}
+    tripleDownLeftUp: {fileID: 5486460369450991707, guid: 3e918cd8d78e6244ebb6f20cb01b5b16, type: 3}
+    tripleLeftUpRight: {fileID: 9007517730366693882, guid: e2933e8ccbc4cdc4e83862b7dfbac806, type: 3}
+    fourway: {fileID: 1665896348363237514, guid: c06a4b17beb8c7e489acf353b949e8f3, type: 3}
+  centerStart: {fileID: 7432398909322420660, guid: 2761c3efa34a8134e972aa10869c6deb, type: 3}
+  centerEnd: {fileID: 1548385832264200413, guid: e3a828b56f07ac44fac8e20c991e064d, type: 3}
+  potentialCenters:
+  - {fileID: 4356605233894200680, guid: 8524cce7c2e426c458ced886b70d64f6, type: 3}
+  - {fileID: 7432398909322420660, guid: 2761c3efa34a8134e972aa10869c6deb, type: 3}
+--- !u!1 &1845412073436667867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1845412073436667866}
+  m_Layer: 0
+  m_Name: Generation Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1845412073436667866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845412073436667867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1845412072190504439}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    public bool closeWhenEntered, openWhenEnemiesCleared;
+    public bool closeWhenEntered/*, openWhenEnemiesCleared*/;
 
     public GameObject[] doors;
 
-    public List<GameObject> enemies = new List<GameObject>();
+    //public List<GameObject> enemies = new List<GameObject>();
 
-    private bool roomActive;
+    [HideInInspector]
+    public bool roomActive;
 
     // Start is called before the first frame update
     void Start()
@@ -21,27 +22,37 @@ public class Room : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enemies.Count > 0 && roomActive && openWhenEnemiesCleared)
+        //if(enemies.Count > 0 && roomActive && openWhenEnemiesCleared)
+        //{
+        //    for(int i = 0; i < enemies.Count; i++)
+        //    {
+        //        if(enemies[i] == null)
+        //        {
+        //            enemies.RemoveAt(i);
+
+        //            i--;
+        //        }
+        //    }
+
+        //    if(enemies.Count == 0)
+        //    {
+        //        foreach (GameObject door in doors)
+        //        {
+        //            door.SetActive(false);
+
+        //            closeWhenEntered = false;
+        //        }
+        //    }
+        //}
+    }
+
+    public void OpenDoors()
+    {
+        foreach (GameObject door in doors)
         {
-            for(int i = 0; i < enemies.Count; i++)
-            {
-                if(enemies[i] == null)
-                {
-                    enemies.RemoveAt(i);
+            door.SetActive(false);
 
-                    i--;
-                }
-            }
-
-            if(enemies.Count == 0)
-            {
-                foreach (GameObject door in doors)
-                {
-                    door.SetActive(false);
-
-                    closeWhenEntered = false;
-                }
-            }
+            closeWhenEntered = false;
         }
     }
 
